@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    background:#403B4A;
+}
+
+.Navbar{
+    display: flex;
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+    left: 560px;
+    
+}
+
+.container{
+    padding: 12px;
+    margin: 15px;
+    border-radius: 12px;
+    border: none;
+}
+
+.logo{
+    display: flex;
+    position: relative;
+    top: 20px;
+    left: 50px;
+    text-decoration: none;
+}
+
+#h1Mid{
+    text-align: center;
+}
