@@ -2,14 +2,14 @@ DROP DATABASE IF EXISTS Poneyfringants;
 CREATE DATABASE Poneyfringants; 
 USE Poneyfringants; 
 
-CREATE USER IF NOT EXISTS enzo@live.fr IDENTIFIED BY 'EnzoAdmin';
+CREATE USER IF NOT EXISTS 'enzo'@'localhost' IDENTIFIED BY 'EnzoAdmin';
 
-GRANT ALL ON Poneyfringants.* TO enzo@live.fr; 
+GRANT ALL ON Poneyfringants.* TO 'enzo'@'localhost'; 
 
 DROP TABLE IF EXISTS utilisateurs;
 CREATE TABLE utilisateurs (
-    id INT PRIMARY KEY AUTO_INCREMENT, -- id est la colonne qui permettre d'indentifier de manière unique un utilisateur
-    -- Pour cela on indique que cette colonne est la clé primaire. Une clé primaire est unique, et ne peut pas être NULL (vide)
+    id INT PRIMARY KEY AUTO_INCREMENT,
+   
     pseudo VARCHAR(255) UNIQUE, 
     email VARCHAR(255) UNIQUE, 
     password VARCHAR(255)

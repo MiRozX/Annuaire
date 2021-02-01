@@ -44,7 +44,6 @@ try {
     $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     // TODO : on vérifie que l'utlisateur (son pseudo où son email) n'existe pas déjà
 
-    // On écrit la requête de recherche de l'utliisateur 
     $rqt = "SELECT * FROM utilisateurs WHERE pseudo=:pseudo OR email=:email";
     // on prépare la requête
     $requetePreparee = $connexion->prepare($rqt);
@@ -62,7 +61,6 @@ try {
         exit;
     }
 
-    // Si on arrive ici, on est prêt à insérer l'utilisateur dans la base de données
     // hashage du mot de passe
     $hash = password_hash($password, PASSWORD_DEFAULT); 
 
@@ -84,8 +82,7 @@ try {
         echo "Problème lors de l'enregistrement";
         exit;
     } else {
-        // TODO : tout ok, message, 
-        // TODO : Quitte ? redirige ? je ne sais pas ce qu'on fait...
+        
         echo "Hey $pseudo, tu es maintenant enregistré, et je connais ton adresse (mail)";
     }
 
